@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 100px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button 
+        {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white;
+            transition: background-color 0.3s ease;
+            
+        }
+
+        button:hover 
+        {
+            background-color: red;
+            transform: scale(1.5);
+            box-shadow: black 2px 2px 12px 3px;
+        }
+        
+
+        .hidden-text 
+        {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            font-size: 18px;
+            color: darkblue;
+        }
+
+        .container:hover .hidden-text 
+        {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button>Click</button>
+    <p class="hidden-text">Surprise! Hidden text.</p>
+    <script>
+        console.log('hello js.');
+        console.log("S V Kishan");
+        console.log("19");
+        // single-line comment
+        /*
+        MULTI-LINE COMMENT
+        JavaScript is a programming language used mainly for web development.
+        It makes web pages interactive
+        */
+
+    </script>
+</body>
+</html>
