@@ -1,0 +1,98 @@
+localStorage.setItem("username", "John");
+localStorage.removeItem("username");
+
+console.log(localStorage.getItem("username"));  // null
+
+
+sessionStorage.setItem("username", "John");
+sessionStorage.removeItem("username");
+
+console.log(sessionStorage.getItem("username"));  // null
+
+//-------------------------------------------------------------------------------------
+localStorage.setItem("name", "John");
+localStorage.setItem("age", "20");
+
+console.log(localStorage.getItem("name")); 
+console.log(localStorage.getItem("age"));  
+
+localStorage.clear();
+
+console.log(localStorage.getItem("name")); // null
+console.log(localStorage.getItem("age"));  // null
+
+sessionStorage.setItem("name", "John");
+sessionStorage.setItem("age", "20");
+
+console.log(sessionStorage.getItem("name")); 
+console.log(sessionStorage.getItem("age"));  
+
+sessionStorage.clear();
+
+console.log(sessionStorage.getItem("name")); // null
+console.log(sessionStorage.getItem("age"));  // null
+
+//-------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Toggle</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Theme Toggle</h1>
+
+    <button onclick="toggleTheme()">
+        Toggle Theme
+    </button>
+
+    <script >
+        let theme = localStorage.getItem("theme");
+        
+        if (theme === "dark") 
+        {
+            document.body.classList.add("dark");
+        }
+
+        function toggleTheme() 
+        {
+
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) 
+            {
+
+                localStorage.setItem("theme", "dark");
+            } 
+            
+            else 
+            {
+                localStorage.setItem("theme", "light");
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
